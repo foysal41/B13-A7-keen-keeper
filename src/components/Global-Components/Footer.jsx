@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container mx-auto">
         {/* Footer Top part */}
         <div className="">
-          <h1 className="text-[61px] "></h1>
+          <h1 className="text-[61px] ">KeenKeeper</h1>
           <p className="text-white/50 text-4">
             Your personal shelf of meaningful connections. Browse, tend, and
             nurture the relationships that matter most.

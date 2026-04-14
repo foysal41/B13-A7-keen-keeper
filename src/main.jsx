@@ -5,6 +5,7 @@ import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import RootLayout from "./Layout/RootLayout";
 import HomePage from "./Pages/HomePage";
+import NotFound from "./components/Global-Components/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
         element: <h1>Stats</h1>,
       },
     ],
+    errorElement: <NotFound></NotFound>,
   },
 ]);
 
