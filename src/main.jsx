@@ -4,6 +4,7 @@ import "./index.css";
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import RootLayout from "./Layout/RootLayout";
+import HomePage from "./Pages/HomePage";
 
 const router = createBrowserRouter([
   {
@@ -12,7 +13,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <h1>Home</h1>,
+        Component: HomePage,
       },
       {
         path: "/timeline",
