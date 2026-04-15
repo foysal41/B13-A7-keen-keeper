@@ -7,7 +7,9 @@ import RootLayout from "./Layout/RootLayout";
 import HomePage from "./Pages/HomePage";
 import NotFound from "./components/Global-Components/NotFound";
 import FriendsDetails from "./Pages/FriendsDetails";
-
+import { ToastContainer } from "react-toastify";
+import Timeline from "./Pages/Timeline";
+import ContactFriendProvider from "./context/ContactFriendProvider";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +26,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/timeline",
-        element: <h1>Timeline</h1>,
+        Component: Timeline,
       },
       {
         path: "/Stats",
@@ -37,8 +39,9 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    
+    <ContactFriendProvider>
       <RouterProvider router={router}></RouterProvider>
-   
+      <ToastContainer position="top-center" />
+    </ContactFriendProvider>
   </StrictMode>,
 );

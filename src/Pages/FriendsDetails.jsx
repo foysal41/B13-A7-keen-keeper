@@ -10,10 +10,14 @@ import { useParams } from "react-router";
 import useApps from "../hooks/useApps";
 import { HiH3 } from "react-icons/hi2";
 import { GridLoader } from "react-spinners";
+import { ContactFriendContext } from "../context/ContactFriendProvider";
+import { useContext } from "react";
+import { toast } from "react-toastify";
 
 const FriendsDetails = () => {
   const { id } = useParams();
   const { friends, loading } = useApps();
+  const { addAction } = useContext(ContactFriendContext);
 
   if (loading) {
     return (
@@ -24,6 +28,12 @@ const FriendsDetails = () => {
   }
 
   const expectedFriend = friends.find((friend) => friend.id === parseInt(id));
+
+  const handleAction = (type) => {
+    if (!expectedFriend) return;
+    addAction(type, expectedFriend);
+    toast.success(`${type} with ${expectedFriend.name}`);
+  };
 
   return (
     <div className=" bg-[#F8FAFC] py-20">
@@ -133,15 +143,24 @@ const FriendsDetails = () => {
               <h3 className="text-[#244D3F] text-[20px]">Quick Check-In </h3>
 
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 justify-between items-center mt-3">
-                <div className="flex justify-center items-center gap-5 bg-[#F8FAFC] md:px-20 py-6 rounded-lg text-center shadow-sm">
+                <div
+                  onClick={() => handleAction("call")}
+                  className="flex justify-center items-center gap-5 bg-[#F8FAFC] md:px-20 py-6 rounded-lg text-center shadow-sm cursor-pointer"
+                >
                   <FaPhoneAlt />
                   <p className="text-[#64748B] text-[18px]">call </p>
                 </div>
-                <div className=" flex justify-center items-center gap-5 bg-[#F8FAFC] md:px-20 py-6 rounded-lg text-center shadow-sm">
+                <div
+                  onClick={() => handleAction("text")}
+                  className=" flex justify-center items-center gap-5 bg-[#F8FAFC] md:px-20 py-6 rounded-lg text-center shadow-sm cursor-pointer"
+                >
                   <FaCommentDots />
                   <p className="text-[#64748B] text-[18px]">Text </p>
                 </div>
-                <div className="flex justify-center items-center gap-5 bg-[#F8FAFC] md:px-20 py-6 rounded-lg text-center shadow-sm">
+                <div
+                  onClick={() => handleAction("video")}
+                  className="flex justify-center items-center gap-5 bg-[#F8FAFC] md:px-20 py-6 rounded-lg text-center shadow-sm cursor-pointer"
+                >
                   <FaVideo />
                   <p className="text-[#64748B] text-[18px]">Video </p>
                 </div>
