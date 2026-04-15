@@ -8,6 +8,7 @@ import HomePage from "./Pages/HomePage";
 import NotFound from "./components/Global-Components/NotFound";
 import FriendsDetails from "./Pages/FriendsDetails";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
         Component: HomePage,
       },
       {
-        path: "/friends-details",
+        path: "/friends-details/:id",
         Component: FriendsDetails,
       },
       {
@@ -36,6 +37,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    
+      <RouterProvider router={router}></RouterProvider>
+   
   </StrictMode>,
 );
