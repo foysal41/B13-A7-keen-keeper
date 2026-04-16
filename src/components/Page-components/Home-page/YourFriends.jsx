@@ -7,7 +7,7 @@ const YourFriends = () => {
   const { friends, loading } = useApps();
 
   return (
-    <div className="container mx-auto py-20">
+    <div className="container mx-auto py-20 px-4">
       <hr className="py-4 text-[#E9E9E9]" />
       <h2 className="text-[24px] font-bold">Your Friends</h2>
 

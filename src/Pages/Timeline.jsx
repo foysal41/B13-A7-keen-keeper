@@ -22,11 +22,9 @@ const Timeline = () => {
     });
   };
 
-  console.log(action);
-
   return (
     <div className="bg-[#F8FAFC]">
-      <div className="container mx-auto py-16 ">
+      <div className="container mx-auto py-16 px-4">
         <h2 className="text-[30px] md:text-[62px] font-bold">Timeline</h2>
 
         <div className="rounded-md space-y-5 ">

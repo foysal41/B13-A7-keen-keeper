@@ -36,7 +36,7 @@ const FriendsDetails = () => {
   };
 
   return (
-    <div className=" bg-[#F8FAFC] py-20">
+    <div className=" bg-[#F8FAFC] py-20 px-4">
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-6">
         {/* Left side  */}
         <div className="space-y-3 grid-cols-1">

@@ -2,6 +2,7 @@ import React from "react";
 import { RiInstagramFill } from "react-icons/ri";
 import { BiLogoFacebook } from "react-icons/bi";
 import { RiTwitterXLine } from "react-icons/ri";
+import { Link } from "react-router";
 
 const Footer = () => {
   return (
@@ -9,7 +10,9 @@ const Footer = () => {
       <div className="container mx-auto">
         {/* Footer Top part */}
         <div className="">
-          <h1 className="text-[61px] ">KeenKeeper</h1>
+          <Link to={"/"} className="text-[61px] ">
+            KeenKeeper
+          </Link>
           <p className="text-white/50 text-4">
             Your personal shelf of meaningful connections. Browse, tend, and
             nurture the relationships that matter most.

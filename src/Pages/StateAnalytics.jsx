@@ -25,33 +25,37 @@ const StateAnalytics = () => {
 
   return (
     <div className="bg-[#F8FAFC]">
-      <div className="container mx-auto py-16 ">
+      <div className="container mx-auto py-16 px-4">
         <h2 className="text-[30px] md:text-[62px] font-bold">
           Friendship Analytics
         </h2>
 
-        <div className="w-full bg-white p-6 rounded-lg mx-auto ">
-          <ResponsiveContainer width="100%" height={300}>
-            <PieChart>
-              <Pie
-                data={reChartData}
-                cx="50%"
-                cy="50%"
-                innerRadius={70}
-                outerRadius={100}
-                paddingAngle={5}
-                dataKey="value"
-                cornerRadius={8}
-              >
-                {reChartData.map((item, idx) => (
-                  <Cell key={idx} fill={colors[idx]}></Cell>
-                ))}
-              </Pie>
-              <Tooltip></Tooltip>
-              <Legend></Legend>
-            </PieChart>
-          </ResponsiveContainer>
-        </div>
+        {action.length === 0 ? (
+          <h3 className="text-center text-xl font-semibold">No Data</h3>
+        ) : (
+          <div className="w-full bg-white p-6 rounded-lg mx-auto ">
+            <ResponsiveContainer width="100%" height={300}>
+              <PieChart>
+                <Pie
+                  data={reChartData}
+                  cx="50%"
+                  cy="50%"
+                  innerRadius={70}
+                  outerRadius={100}
+                  paddingAngle={5}
+                  dataKey="value"
+                  cornerRadius={8}
+                >
+                  {reChartData.map((item, idx) => (
+                    <Cell key={idx} fill={colors[idx]}></Cell>
+                  ))}
+                </Pie>
+                <Tooltip></Tooltip>
+                <Legend></Legend>
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+        )}
       </div>
     </div>
   );
