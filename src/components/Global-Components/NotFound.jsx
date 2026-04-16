@@ -1,5 +1,6 @@
 import React from "react";
 import { FaArrowLeft } from "react-icons/fa";
+import { Link } from "react-router";
 
 const NotFound = () => {
   return (
@@ -10,10 +11,10 @@ const NotFound = () => {
         Looks like this friendship link is broken. The page you're looking for
         doesn't exist or has been moved.
       </p>
-      <button className="mt-2 btn bg-[#2f4f46] text-white">
+      <Link to={"/"} className="mt-2 btn bg-[#2f4f46] text-white">
         <FaArrowLeft className="text-sm" />
         Back to Home
-      </button>
+      </Link>
     </div>
   );
 };

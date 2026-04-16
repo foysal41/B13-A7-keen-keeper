@@ -22,15 +22,15 @@ const Navbar = () => {
           <ul className="flex flex-cols gap-8">
             <NavLink to={"/"} className={navLinkClass}>
               <AiOutlineHome />
-              <a className="">Home</a>
+              Home
             </NavLink>
             <NavLink to={"/timeline"} className={navLinkClass}>
               <CiClock2 />
-              <a className="">Timeline</a>
+              Timeline
             </NavLink>
             <NavLink to={"/stats"} className={navLinkClass}>
               <IoAnalyticsSharp />
-              <a className="">Stats</a>
+              Stats
             </NavLink>
           </ul>
         </div>
