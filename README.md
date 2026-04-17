@@ -1,16 +1,25 @@
-# React + Vite
+##Name of your project
+This project name is keen-keeper.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##A short description
+Friend connect web application. Users can browse a a list of friends, view single page for details. From the single page when user clicked call or other action this data goes to timeline. Finally we can see the state. 
 
-Currently, two official plugins are available:
+##Technologies you used
+React.js
+React Router DOM
+Tailwind CSS + Daisy UI
+Context API
+React Icon
+Recharts
+React Spinners
+React Toastify
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+##3 key features of your project
+Dynamic Friend Details page
+- Users can click any friend card and can see view details info dynamically. 
 
-## React Compiler
+Can call, text, video
+- Users can make call, text, and video here i handle globally state management 
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Responsive UI
+Responsive Navbar, footer, banner, stats and card for all device
